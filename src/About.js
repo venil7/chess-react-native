@@ -1,6 +1,11 @@
 import React from 'react';
+import { Text } from 'react-native';
 import { Content } from './Content';
 
 export const About = () => (
-  <Content>about...</Content>
+  <Content>
+    <Text>
+      about...
+    </Text>
+  </Content>
 );

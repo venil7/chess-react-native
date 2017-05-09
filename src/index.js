@@ -1,3 +1,3 @@
-export { Menu } from './Home';
-export { Game } from './Game';
+export { Menu } from './Menu';
+export { Main } from './Main';
 export { About } from './About';
