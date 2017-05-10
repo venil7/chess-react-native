@@ -24,6 +24,12 @@
     "react": "16.0.0-alpha.6",
     "react-native": "^0.43.4",
     "react-router-native": "^4.1.1",
-    "styled-components": "^1.4.6"
+    "styled-components": "^1.4.6",
+    "prop-types": "^15.5.8",
+    "react-dom": "^15.5.4",
+    "react-redux": "^5.0.2",
+    "redux": "^3.6.0",
+    "redux-logger": "^3.0.1",
+    "redux-thunk": "^2.2.0"
   }
 }

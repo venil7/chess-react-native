@@ -1,11 +1,11 @@
 import React from 'react';
 import { Text } from 'react-native';
-import { Content } from './Content';
+import { Content } from '../Content';
 
-export const Main = () => (
+export const About = () => (
   <Content>
     <Text>
-      main...
+      about...
     </Text>
   </Content>
 );

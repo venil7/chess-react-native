@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import { NativeRouter, Route, Link } from 'react-router-native';
-import { Menu, Main, About } from './src';
+import { NativeRouter, Route } from 'react-router-native';
+import { Menu, Main, About, TopMenu, MenuItem } from './src/components';
 import styled from 'styled-components/native';
 
 // import { Board } from 'chess-js';
@@ -10,24 +10,7 @@ const Container = styled.View`
   flex: 1;
   align-items: center;
   justify-content: center;
-  background-color: #fff;
-`;
-
-const TopMenu = styled.View`
-  flex-direction: row;
-  justify-content: space-around;
-`;
-
-const MenuItem = styled(Link) `
-  align-items: center;
-  margin-top: 40;
-  padding: 10;
-  border: 1;
-  border-color: grey;
-  border-radius: 10;
-  background: ${(props) => props.pressed ? '#cd6a51' : 'papayawhip'};
-  margin-left: 10;
-  margin-right: 10;
+  background-color: white;
 `;
 
 export default App = () => (
