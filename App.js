@@ -1,10 +1,11 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import { NativeRouter, Route } from 'react-router-native';
-import { Menu, Main, About, TopMenu, MenuItem } from './src/components';
-import styled from 'styled-components/native';
-
-// import { Board } from 'chess-js';
+import React from "react";
+import { Provider } from "react-redux";
+import styled from "styled-components/native";
+import { StyleSheet, Text, View } from "react-native";
+import { NativeRouter, Route } from "react-router-native";
+import { Menu, Main, About, TopMenu, MenuItem } from "./src/components";
+import { MENU, MAIN, ABOUT } from "./src/flux/actions";
+import { newStore } from "./src/flux/store";
 
 const Container = styled.View`
   flex: 1;
@@ -13,25 +14,26 @@ const Container = styled.View`
   background-color: white;
 `;
 
-export default App = () => (
-  <NativeRouter>
-    <Container>
+const items = [
+  { path: "/", label: "Menu", value: MENU },
+  { path: "/main", label: "Main", value: MAIN },
+  { path: "/about", label: "About", value: ABOUT }
+];
 
-      <TopMenu>
-        <MenuItem pressed to="/">
-          <Text>Menu</Text>
-        </MenuItem>
-        <MenuItem to="/main">
-          <Text>Game</Text>
-        </MenuItem >
-        <MenuItem to="/about">
-          <Text>About</Text>
-        </MenuItem>
-      </TopMenu>
+const store = newStore();
 
-      <Route exact path="/" component={Menu} />
-      <Route path="/main" component={Main} />
-      <Route path="/about" component={About} />
-    </Container>
-  </NativeRouter>
-);
+export default (App = () => (
+  <Provider store={store}>
+    <NativeRouter>
+      <Container>
+
+        <TopMenu items={items} />
+
+        <Route exact path="/" component={Menu} />
+        <Route path="/main" component={Main} />
+        <Route path="/about" component={About} />
+
+      </Container>
+    </NativeRouter>
+  </Provider>
+));
