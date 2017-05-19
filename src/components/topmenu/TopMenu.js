@@ -5,7 +5,7 @@ import { Text } from 'react-native';
 import { connect } from 'react-redux';
 import { appActions } from '../../flux/actions';
 
-const connected = connect(s => ({ app: s.app }));
+const connected = connect(state => ({ router: state.router }));
 const MenuView = styled.View`
   flex-direction: row;
   justify-content: space-around;
@@ -29,7 +29,7 @@ const TopMenu = (props) => (
       <MenuItem
         to={item.path}
         key={item.path}
-        pressed={item.value === props.app.menu}>
+        pressed={item.path === props.router.location.pathname}>
         <Text>{item.label}</Text>
       </MenuItem>
     ))}

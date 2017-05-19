@@ -1,3 +1,4 @@
+import { ConnectedRouter, routerMiddleware, routerReducer } from "react-router-redux";
 import { applyMiddleware, createStore, combineReducers } from "redux";
 import { createLogger } from "redux-logger";
 import thunk from "redux-thunk";
@@ -9,8 +10,11 @@ const loggerMiddleware = createLogger();
 
 const reducer = combineReducers({
   game: gameReducer,
-  app: appReducer
+  app: appReducer,
+  router: routerReducer,
 });
 
-export const newStore = () =>
-  createStore(reducer, applyMiddleware(thunk, loggerMiddleware));
+export const newStore = (history) => {
+  const routeMiddleware = routerMiddleware(history);
+  return createStore(reducer, applyMiddleware(thunk, loggerMiddleware, routeMiddleware));
+}
