@@ -1,4 +1,4 @@
-package com.chessreactnative;
+package uk.co.darkruby.chess;
 
 import com.facebook.react.ReactActivity;
 

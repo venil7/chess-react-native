@@ -1,4 +1,4 @@
-package com.chessreactnative;
+package uk.co.darkruby.chess;
 
 import android.app.Application;
 
