@@ -3,17 +3,28 @@ import PropTypes from "prop-types";
 import { Text } from "react-native";
 import styled from "styled-components/native";
 
-const StyledCell = styled.TouchableHighlight`
+const possibleMoveColor = "palegreen";
+const selectedColor = "darkseagreen";
+const regularLightColor = "ivory";
+const regularDarkColor = "lightsteelblue"; //SkyBlue
+
+export const cellBackgroundColor = ({ col, row, possibleMove, selected }) => {
+  const even = i => i % 2 === 0;
+  const regularColor = even(col)
+    ? even(row) ? regularLightColor : regularDarkColor
+    : even(row) ? regularDarkColor : regularLightColor;
+  return possibleMove ? possibleMoveColor : selected ? selectedColor : regularColor;
+};
+export const StyledCell = styled.TouchableHighlight`
   width: 40;
   height: 40;
-  border: 1;
+  /*border: 1;*/
   border-color: grey;
   display: flex;
   flex-flow: row wrap;
   align-items: center;
   justify-content: center;
-  font-size: 16;
-  background-color: ${({ selected, possibleMove }) => (possibleMove ? "palegreen" : selected ? "darkseagreen" : "ivory")};
+  background-color: ${cellBackgroundColor}
 `;
 
 const SymbolText = styled.Text`
@@ -25,7 +36,7 @@ export class Cell extends Component {
     selected: PropTypes.bool,
     possibleMove: PropTypes.bool,
     onPress: PropTypes.func.isRequired,
-    field: PropTypes.object.isRequired,
+    field: PropTypes.object.isRequired
   };
 
   onPress() {
@@ -37,7 +48,13 @@ export class Cell extends Component {
     const { field, selected, possibleMove } = this.props;
     const symbol = field.isEmpty ? "" : field.piece.toString();
     return (
-      <StyledCell selected possibleMove onPress={() => this.onPress()}>
+      <StyledCell
+        col={field.coordinates.col}
+        row={field.coordinates.row}
+        selected={selected}
+        possibleMove={possibleMove}
+        onPress={() => this.onPress()}
+      >
         <SymbolText>{symbol}</SymbolText>
       </StyledCell>
     );

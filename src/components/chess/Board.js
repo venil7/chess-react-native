@@ -9,7 +9,7 @@ const StyledBoard = styled.View`
   flex-flow: row wrap;
   width: 336;
   border: 1;
-  border-color: white;
+  border-color: lightsteelblue;
   justify-content: space-around;
 `;
 
@@ -17,7 +17,7 @@ export class Board extends Component {
   static propTypes = {
     board: PropTypes.object.isRequired,
     onCellPress: PropTypes.func.isRequired,
-    selectedField: PropTypes.object.isRequired,
+    selectedField: PropTypes.object,
     possibleMoves: PropTypes.array.isRequired,
   };
 

@@ -1,3 +1,5 @@
+import { Game, Player, Move } from "chess-js";
+
 export const newGame = () => {
   return { type: 'NEW_GAME' };
 };

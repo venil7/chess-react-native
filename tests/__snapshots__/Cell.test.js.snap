@@ -1,0 +1,896 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Cell /> renders empty 1`] = `
+ShallowWrapper {
+  "complexSelector": ComplexSelector {
+    "buildPredicate": [Function],
+    "childrenOfNode": [Function],
+    "findWhereUnwrapped": [Function],
+  },
+  "length": 1,
+  "node": <Styled(TouchableHighlight)
+    col={0}
+    onPress={[Function]}
+    possibleMove={undefined}
+    row={0}
+    selected={undefined}
+>
+    <Styled(Text) />
+</Styled(TouchableHighlight)>,
+  "nodes": Array [
+    <Styled(TouchableHighlight)
+      col={0}
+      onPress={[Function]}
+      possibleMove={undefined}
+      row={0}
+      selected={undefined}
+>
+      <Styled(Text) />
+</Styled(TouchableHighlight)>,
+  ],
+  "options": Object {},
+  "renderer": ReactShallowRenderer {
+    "_instance": ShallowComponentWrapper {
+      "_calledComponentWillUnmount": false,
+      "_compositeType": 0,
+      "_context": Object {},
+      "_currentElement": <Cell
+        field={
+                Field {
+                        "_coordinates": Coordinates {
+                          "col": 0,
+                          "row": 0,
+                        },
+                        "_piece": null,
+                      }
+        }
+        onPress={[Function]}
+/>,
+      "_debugID": 1,
+      "_hostContainerInfo": null,
+      "_hostParent": null,
+      "_instance": Cell {
+        "_reactInternalInstance": [Circular],
+        "context": Object {},
+        "props": Object {
+          "field": Field {
+            "_coordinates": Coordinates {
+              "col": 0,
+              "row": 0,
+            },
+            "_piece": null,
+          },
+          "onPress": [Function],
+        },
+        "refs": Object {},
+        "state": null,
+        "updater": Object {
+          "enqueueCallback": [Function],
+          "enqueueCallbackInternal": [Function],
+          "enqueueElementInternal": [Function],
+          "enqueueForceUpdate": [Function],
+          "enqueueReplaceState": [Function],
+          "enqueueSetState": [Function],
+          "isMounted": [Function],
+          "validateCallback": [Function],
+        },
+      },
+      "_mountOrder": 1,
+      "_pendingCallbacks": null,
+      "_pendingElement": null,
+      "_pendingForceUpdate": false,
+      "_pendingReplaceState": false,
+      "_pendingStateQueue": null,
+      "_renderedComponent": NoopInternalComponent {
+        "_currentElement": <Styled(TouchableHighlight)
+          col={0}
+          onPress={[Function]}
+          possibleMove={undefined}
+          row={0}
+          selected={undefined}
+>
+          <Styled(Text) />
+</Styled(TouchableHighlight)>,
+        "_debugID": 2,
+        "_renderedOutput": <Styled(TouchableHighlight)
+          col={0}
+          onPress={[Function]}
+          possibleMove={undefined}
+          row={0}
+          selected={undefined}
+>
+          <Styled(Text) />
+</Styled(TouchableHighlight)>,
+      },
+      "_renderedNodeType": 1,
+      "_rootNodeID": 0,
+      "_topLevelWrapper": null,
+      "_updateBatchNumber": null,
+      "_warnedAboutRefsInRender": false,
+    },
+    "getRenderOutput": [Function],
+    "render": [Function],
+  },
+  "root": [Circular],
+  "unrendered": <Cell
+    field={
+        Field {
+            "_coordinates": Coordinates {
+              "col": 0,
+              "row": 0,
+            },
+            "_piece": null,
+          }
+    }
+    onPress={[Function]}
+/>,
+}
+`;
+
+exports[`<StyledCell /> renders selected, non possible move 1`] = `
+ShallowWrapper {
+  "complexSelector": ComplexSelector {
+    "buildPredicate": [Function],
+    "childrenOfNode": [Function],
+    "findWhereUnwrapped": [Function],
+  },
+  "length": 1,
+  "node": <TouchableHighlight
+    activeOpacity={0.85}
+    onPress={[Function]}
+    possibleMove={false}
+    selected={true}
+    style={
+        Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "darkseagreen",
+              "borderColor": "grey",
+              "display": "flex",
+              "flexDirection": "row",
+              "flexWrap": "wrap",
+              "height": 40,
+              "justifyContent": "center",
+              "width": 40,
+            },
+            undefined,
+          ]
+    }
+    underlayColor="black"
+>
+    X
+</TouchableHighlight>,
+  "nodes": Array [
+    <TouchableHighlight
+      activeOpacity={0.85}
+      onPress={[Function]}
+      possibleMove={false}
+      selected={true}
+      style={
+            Array [
+                  Object {
+                    "alignItems": "center",
+                    "backgroundColor": "darkseagreen",
+                    "borderColor": "grey",
+                    "display": "flex",
+                    "flexDirection": "row",
+                    "flexWrap": "wrap",
+                    "height": 40,
+                    "justifyContent": "center",
+                    "width": 40,
+                  },
+                  undefined,
+                ]
+      }
+      underlayColor="black"
+>
+      X
+</TouchableHighlight>,
+  ],
+  "options": Object {},
+  "renderer": ReactShallowRenderer {
+    "_instance": ShallowComponentWrapper {
+      "_calledComponentWillUnmount": false,
+      "_compositeType": 0,
+      "_context": Object {},
+      "_currentElement": <Styled(TouchableHighlight)
+        onPress={[Function]}
+        possibleMove={false}
+        selected={true}
+>
+        X
+</Styled(TouchableHighlight)>,
+      "_debugID": 5,
+      "_hostContainerInfo": null,
+      "_hostParent": null,
+      "_instance": StyledNativeComponent {
+        "_reactInternalInstance": [Circular],
+        "context": Object {
+          "__styled-components__": undefined,
+        },
+        "props": Object {
+          "children": "X",
+          "onPress": [Function],
+          "possibleMove": false,
+          "selected": true,
+        },
+        "refs": Object {},
+        "state": Object {
+          "generatedStyles": Object {
+            "alignItems": "center",
+            "backgroundColor": "darkseagreen",
+            "borderColor": "grey",
+            "display": "flex",
+            "flexDirection": "row",
+            "flexWrap": "wrap",
+            "height": 40,
+            "justifyContent": "center",
+            "width": 40,
+          },
+          "theme": Object {},
+        },
+        "updater": Object {
+          "enqueueCallback": [Function],
+          "enqueueCallbackInternal": [Function],
+          "enqueueElementInternal": [Function],
+          "enqueueForceUpdate": [Function],
+          "enqueueReplaceState": [Function],
+          "enqueueSetState": [Function],
+          "isMounted": [Function],
+          "validateCallback": [Function],
+        },
+      },
+      "_mountOrder": 3,
+      "_pendingCallbacks": null,
+      "_pendingElement": null,
+      "_pendingForceUpdate": false,
+      "_pendingReplaceState": false,
+      "_pendingStateQueue": null,
+      "_renderedComponent": NoopInternalComponent {
+        "_currentElement": <TouchableHighlight
+          activeOpacity={0.85}
+          onPress={[Function]}
+          possibleMove={false}
+          selected={true}
+          style={
+                    Array [
+                              Object {
+                                "alignItems": "center",
+                                "backgroundColor": "darkseagreen",
+                                "borderColor": "grey",
+                                "display": "flex",
+                                "flexDirection": "row",
+                                "flexWrap": "wrap",
+                                "height": 40,
+                                "justifyContent": "center",
+                                "width": 40,
+                              },
+                              undefined,
+                            ]
+          }
+          underlayColor="black"
+>
+          X
+</TouchableHighlight>,
+        "_debugID": 6,
+        "_renderedOutput": <TouchableHighlight
+          activeOpacity={0.85}
+          onPress={[Function]}
+          possibleMove={false}
+          selected={true}
+          style={
+                    Array [
+                              Object {
+                                "alignItems": "center",
+                                "backgroundColor": "darkseagreen",
+                                "borderColor": "grey",
+                                "display": "flex",
+                                "flexDirection": "row",
+                                "flexWrap": "wrap",
+                                "height": 40,
+                                "justifyContent": "center",
+                                "width": 40,
+                              },
+                              undefined,
+                            ]
+          }
+          underlayColor="black"
+>
+          X
+</TouchableHighlight>,
+      },
+      "_renderedNodeType": 1,
+      "_rootNodeID": 0,
+      "_topLevelWrapper": null,
+      "_updateBatchNumber": null,
+      "_warnedAboutRefsInRender": false,
+    },
+    "getRenderOutput": [Function],
+    "render": [Function],
+  },
+  "root": [Circular],
+  "unrendered": <Styled(TouchableHighlight)
+    onPress={[Function]}
+    possibleMove={false}
+    selected={true}
+>
+    X
+</Styled(TouchableHighlight)>,
+}
+`;
+
+exports[`<StyledCell /> renders selected, possible move 1`] = `
+ShallowWrapper {
+  "complexSelector": ComplexSelector {
+    "buildPredicate": [Function],
+    "childrenOfNode": [Function],
+    "findWhereUnwrapped": [Function],
+  },
+  "length": 1,
+  "node": <TouchableHighlight
+    activeOpacity={0.85}
+    onPress={[Function]}
+    possibleMove={true}
+    selected={true}
+    style={
+        Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "palegreen",
+              "borderColor": "grey",
+              "display": "flex",
+              "flexDirection": "row",
+              "flexWrap": "wrap",
+              "height": 40,
+              "justifyContent": "center",
+              "width": 40,
+            },
+            undefined,
+          ]
+    }
+    underlayColor="black"
+>
+    X
+</TouchableHighlight>,
+  "nodes": Array [
+    <TouchableHighlight
+      activeOpacity={0.85}
+      onPress={[Function]}
+      possibleMove={true}
+      selected={true}
+      style={
+            Array [
+                  Object {
+                    "alignItems": "center",
+                    "backgroundColor": "palegreen",
+                    "borderColor": "grey",
+                    "display": "flex",
+                    "flexDirection": "row",
+                    "flexWrap": "wrap",
+                    "height": 40,
+                    "justifyContent": "center",
+                    "width": 40,
+                  },
+                  undefined,
+                ]
+      }
+      underlayColor="black"
+>
+      X
+</TouchableHighlight>,
+  ],
+  "options": Object {},
+  "renderer": ReactShallowRenderer {
+    "_instance": ShallowComponentWrapper {
+      "_calledComponentWillUnmount": false,
+      "_compositeType": 0,
+      "_context": Object {},
+      "_currentElement": <Styled(TouchableHighlight)
+        onPress={[Function]}
+        possibleMove={true}
+        selected={true}
+>
+        X
+</Styled(TouchableHighlight)>,
+      "_debugID": 9,
+      "_hostContainerInfo": null,
+      "_hostParent": null,
+      "_instance": StyledNativeComponent {
+        "_reactInternalInstance": [Circular],
+        "context": Object {
+          "__styled-components__": undefined,
+        },
+        "props": Object {
+          "children": "X",
+          "onPress": [Function],
+          "possibleMove": true,
+          "selected": true,
+        },
+        "refs": Object {},
+        "state": Object {
+          "generatedStyles": Object {
+            "alignItems": "center",
+            "backgroundColor": "palegreen",
+            "borderColor": "grey",
+            "display": "flex",
+            "flexDirection": "row",
+            "flexWrap": "wrap",
+            "height": 40,
+            "justifyContent": "center",
+            "width": 40,
+          },
+          "theme": Object {},
+        },
+        "updater": Object {
+          "enqueueCallback": [Function],
+          "enqueueCallbackInternal": [Function],
+          "enqueueElementInternal": [Function],
+          "enqueueForceUpdate": [Function],
+          "enqueueReplaceState": [Function],
+          "enqueueSetState": [Function],
+          "isMounted": [Function],
+          "validateCallback": [Function],
+        },
+      },
+      "_mountOrder": 5,
+      "_pendingCallbacks": null,
+      "_pendingElement": null,
+      "_pendingForceUpdate": false,
+      "_pendingReplaceState": false,
+      "_pendingStateQueue": null,
+      "_renderedComponent": NoopInternalComponent {
+        "_currentElement": <TouchableHighlight
+          activeOpacity={0.85}
+          onPress={[Function]}
+          possibleMove={true}
+          selected={true}
+          style={
+                    Array [
+                              Object {
+                                "alignItems": "center",
+                                "backgroundColor": "palegreen",
+                                "borderColor": "grey",
+                                "display": "flex",
+                                "flexDirection": "row",
+                                "flexWrap": "wrap",
+                                "height": 40,
+                                "justifyContent": "center",
+                                "width": 40,
+                              },
+                              undefined,
+                            ]
+          }
+          underlayColor="black"
+>
+          X
+</TouchableHighlight>,
+        "_debugID": 10,
+        "_renderedOutput": <TouchableHighlight
+          activeOpacity={0.85}
+          onPress={[Function]}
+          possibleMove={true}
+          selected={true}
+          style={
+                    Array [
+                              Object {
+                                "alignItems": "center",
+                                "backgroundColor": "palegreen",
+                                "borderColor": "grey",
+                                "display": "flex",
+                                "flexDirection": "row",
+                                "flexWrap": "wrap",
+                                "height": 40,
+                                "justifyContent": "center",
+                                "width": 40,
+                              },
+                              undefined,
+                            ]
+          }
+          underlayColor="black"
+>
+          X
+</TouchableHighlight>,
+      },
+      "_renderedNodeType": 1,
+      "_rootNodeID": 0,
+      "_topLevelWrapper": null,
+      "_updateBatchNumber": null,
+      "_warnedAboutRefsInRender": false,
+    },
+    "getRenderOutput": [Function],
+    "render": [Function],
+  },
+  "root": [Circular],
+  "unrendered": <Styled(TouchableHighlight)
+    onPress={[Function]}
+    possibleMove={true}
+    selected={true}
+>
+    X
+</Styled(TouchableHighlight)>,
+}
+`;
+
+exports[`<StyledCell /> renders unselected, non possible move 1`] = `
+ShallowWrapper {
+  "complexSelector": ComplexSelector {
+    "buildPredicate": [Function],
+    "childrenOfNode": [Function],
+    "findWhereUnwrapped": [Function],
+  },
+  "length": 1,
+  "node": <TouchableHighlight
+    activeOpacity={0.85}
+    onPress={[Function]}
+    possibleMove={false}
+    selected={false}
+    style={
+        Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "ivory",
+              "borderColor": "grey",
+              "display": "flex",
+              "flexDirection": "row",
+              "flexWrap": "wrap",
+              "height": 40,
+              "justifyContent": "center",
+              "width": 40,
+            },
+            undefined,
+          ]
+    }
+    underlayColor="black"
+>
+    X
+</TouchableHighlight>,
+  "nodes": Array [
+    <TouchableHighlight
+      activeOpacity={0.85}
+      onPress={[Function]}
+      possibleMove={false}
+      selected={false}
+      style={
+            Array [
+                  Object {
+                    "alignItems": "center",
+                    "backgroundColor": "ivory",
+                    "borderColor": "grey",
+                    "display": "flex",
+                    "flexDirection": "row",
+                    "flexWrap": "wrap",
+                    "height": 40,
+                    "justifyContent": "center",
+                    "width": 40,
+                  },
+                  undefined,
+                ]
+      }
+      underlayColor="black"
+>
+      X
+</TouchableHighlight>,
+  ],
+  "options": Object {},
+  "renderer": ReactShallowRenderer {
+    "_instance": ShallowComponentWrapper {
+      "_calledComponentWillUnmount": false,
+      "_compositeType": 0,
+      "_context": Object {},
+      "_currentElement": <Styled(TouchableHighlight)
+        onPress={[Function]}
+        possibleMove={false}
+        selected={false}
+>
+        X
+</Styled(TouchableHighlight)>,
+      "_debugID": 3,
+      "_hostContainerInfo": null,
+      "_hostParent": null,
+      "_instance": StyledNativeComponent {
+        "_reactInternalInstance": [Circular],
+        "context": Object {
+          "__styled-components__": undefined,
+        },
+        "props": Object {
+          "children": "X",
+          "onPress": [Function],
+          "possibleMove": false,
+          "selected": false,
+        },
+        "refs": Object {},
+        "state": Object {
+          "generatedStyles": Object {
+            "alignItems": "center",
+            "backgroundColor": "ivory",
+            "borderColor": "grey",
+            "display": "flex",
+            "flexDirection": "row",
+            "flexWrap": "wrap",
+            "height": 40,
+            "justifyContent": "center",
+            "width": 40,
+          },
+          "theme": Object {},
+        },
+        "updater": Object {
+          "enqueueCallback": [Function],
+          "enqueueCallbackInternal": [Function],
+          "enqueueElementInternal": [Function],
+          "enqueueForceUpdate": [Function],
+          "enqueueReplaceState": [Function],
+          "enqueueSetState": [Function],
+          "isMounted": [Function],
+          "validateCallback": [Function],
+        },
+      },
+      "_mountOrder": 2,
+      "_pendingCallbacks": null,
+      "_pendingElement": null,
+      "_pendingForceUpdate": false,
+      "_pendingReplaceState": false,
+      "_pendingStateQueue": null,
+      "_renderedComponent": NoopInternalComponent {
+        "_currentElement": <TouchableHighlight
+          activeOpacity={0.85}
+          onPress={[Function]}
+          possibleMove={false}
+          selected={false}
+          style={
+                    Array [
+                              Object {
+                                "alignItems": "center",
+                                "backgroundColor": "ivory",
+                                "borderColor": "grey",
+                                "display": "flex",
+                                "flexDirection": "row",
+                                "flexWrap": "wrap",
+                                "height": 40,
+                                "justifyContent": "center",
+                                "width": 40,
+                              },
+                              undefined,
+                            ]
+          }
+          underlayColor="black"
+>
+          X
+</TouchableHighlight>,
+        "_debugID": 4,
+        "_renderedOutput": <TouchableHighlight
+          activeOpacity={0.85}
+          onPress={[Function]}
+          possibleMove={false}
+          selected={false}
+          style={
+                    Array [
+                              Object {
+                                "alignItems": "center",
+                                "backgroundColor": "ivory",
+                                "borderColor": "grey",
+                                "display": "flex",
+                                "flexDirection": "row",
+                                "flexWrap": "wrap",
+                                "height": 40,
+                                "justifyContent": "center",
+                                "width": 40,
+                              },
+                              undefined,
+                            ]
+          }
+          underlayColor="black"
+>
+          X
+</TouchableHighlight>,
+      },
+      "_renderedNodeType": 1,
+      "_rootNodeID": 0,
+      "_topLevelWrapper": null,
+      "_updateBatchNumber": null,
+      "_warnedAboutRefsInRender": false,
+    },
+    "getRenderOutput": [Function],
+    "render": [Function],
+  },
+  "root": [Circular],
+  "unrendered": <Styled(TouchableHighlight)
+    onPress={[Function]}
+    possibleMove={false}
+    selected={false}
+>
+    X
+</Styled(TouchableHighlight)>,
+}
+`;
+
+exports[`<StyledCell /> renders unselected, possible move 1`] = `
+ShallowWrapper {
+  "complexSelector": ComplexSelector {
+    "buildPredicate": [Function],
+    "childrenOfNode": [Function],
+    "findWhereUnwrapped": [Function],
+  },
+  "length": 1,
+  "node": <TouchableHighlight
+    activeOpacity={0.85}
+    onPress={[Function]}
+    possibleMove={true}
+    selected={false}
+    style={
+        Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "palegreen",
+              "borderColor": "grey",
+              "display": "flex",
+              "flexDirection": "row",
+              "flexWrap": "wrap",
+              "height": 40,
+              "justifyContent": "center",
+              "width": 40,
+            },
+            undefined,
+          ]
+    }
+    underlayColor="black"
+>
+    X
+</TouchableHighlight>,
+  "nodes": Array [
+    <TouchableHighlight
+      activeOpacity={0.85}
+      onPress={[Function]}
+      possibleMove={true}
+      selected={false}
+      style={
+            Array [
+                  Object {
+                    "alignItems": "center",
+                    "backgroundColor": "palegreen",
+                    "borderColor": "grey",
+                    "display": "flex",
+                    "flexDirection": "row",
+                    "flexWrap": "wrap",
+                    "height": 40,
+                    "justifyContent": "center",
+                    "width": 40,
+                  },
+                  undefined,
+                ]
+      }
+      underlayColor="black"
+>
+      X
+</TouchableHighlight>,
+  ],
+  "options": Object {},
+  "renderer": ReactShallowRenderer {
+    "_instance": ShallowComponentWrapper {
+      "_calledComponentWillUnmount": false,
+      "_compositeType": 0,
+      "_context": Object {},
+      "_currentElement": <Styled(TouchableHighlight)
+        onPress={[Function]}
+        possibleMove={true}
+        selected={false}
+>
+        X
+</Styled(TouchableHighlight)>,
+      "_debugID": 7,
+      "_hostContainerInfo": null,
+      "_hostParent": null,
+      "_instance": StyledNativeComponent {
+        "_reactInternalInstance": [Circular],
+        "context": Object {
+          "__styled-components__": undefined,
+        },
+        "props": Object {
+          "children": "X",
+          "onPress": [Function],
+          "possibleMove": true,
+          "selected": false,
+        },
+        "refs": Object {},
+        "state": Object {
+          "generatedStyles": Object {
+            "alignItems": "center",
+            "backgroundColor": "palegreen",
+            "borderColor": "grey",
+            "display": "flex",
+            "flexDirection": "row",
+            "flexWrap": "wrap",
+            "height": 40,
+            "justifyContent": "center",
+            "width": 40,
+          },
+          "theme": Object {},
+        },
+        "updater": Object {
+          "enqueueCallback": [Function],
+          "enqueueCallbackInternal": [Function],
+          "enqueueElementInternal": [Function],
+          "enqueueForceUpdate": [Function],
+          "enqueueReplaceState": [Function],
+          "enqueueSetState": [Function],
+          "isMounted": [Function],
+          "validateCallback": [Function],
+        },
+      },
+      "_mountOrder": 4,
+      "_pendingCallbacks": null,
+      "_pendingElement": null,
+      "_pendingForceUpdate": false,
+      "_pendingReplaceState": false,
+      "_pendingStateQueue": null,
+      "_renderedComponent": NoopInternalComponent {
+        "_currentElement": <TouchableHighlight
+          activeOpacity={0.85}
+          onPress={[Function]}
+          possibleMove={true}
+          selected={false}
+          style={
+                    Array [
+                              Object {
+                                "alignItems": "center",
+                                "backgroundColor": "palegreen",
+                                "borderColor": "grey",
+                                "display": "flex",
+                                "flexDirection": "row",
+                                "flexWrap": "wrap",
+                                "height": 40,
+                                "justifyContent": "center",
+                                "width": 40,
+                              },
+                              undefined,
+                            ]
+          }
+          underlayColor="black"
+>
+          X
+</TouchableHighlight>,
+        "_debugID": 8,
+        "_renderedOutput": <TouchableHighlight
+          activeOpacity={0.85}
+          onPress={[Function]}
+          possibleMove={true}
+          selected={false}
+          style={
+                    Array [
+                              Object {
+                                "alignItems": "center",
+                                "backgroundColor": "palegreen",
+                                "borderColor": "grey",
+                                "display": "flex",
+                                "flexDirection": "row",
+                                "flexWrap": "wrap",
+                                "height": 40,
+                                "justifyContent": "center",
+                                "width": 40,
+                              },
+                              undefined,
+                            ]
+          }
+          underlayColor="black"
+>
+          X
+</TouchableHighlight>,
+      },
+      "_renderedNodeType": 1,
+      "_rootNodeID": 0,
+      "_topLevelWrapper": null,
+      "_updateBatchNumber": null,
+      "_warnedAboutRefsInRender": false,
+    },
+    "getRenderOutput": [Function],
+    "render": [Function],
+  },
+  "root": [Circular],
+  "unrendered": <Styled(TouchableHighlight)
+    onPress={[Function]}
+    possibleMove={true}
+    selected={false}
+>
+    X
+</Styled(TouchableHighlight)>,
+}
+`;
