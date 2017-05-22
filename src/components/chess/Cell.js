@@ -18,7 +18,6 @@ export const cellBackgroundColor = ({ col, row, possibleMove, selected }) => {
 export const StyledCell = styled.TouchableHighlight`
   width: 40;
   height: 40;
-  /*border: 1;*/
   border-color: grey;
   display: flex;
   flex-flow: row wrap;

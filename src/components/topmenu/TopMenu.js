@@ -7,20 +7,22 @@ import { appActions } from '../../flux/actions';
 
 const connected = connect(state => ({ router: state.router }));
 const MenuView = styled.View`
+  display: flex;
   flex-direction: row;
-  justify-content: space-around;
 `;
 
 const MenuItem = styled(Link)`
+  display: flex;
+  flex-grow: 1;
   align-items: center;
-  margin-top: 40;
-  padding: 10;
-  border: ${({ pressed }) => pressed ? 2 : 1};
-  border-color: indianred;
-  border-radius: 10;
-  background: ${({ pressed }) => pressed ? 'lightsalmon' : 'papayawhip'};
-  margin-left: 10;
-  margin-right: 10;
+  justify-content: center;
+
+  height: 40;
+  background: ${({ pressed }) => pressed ? 'lavender' : 'snow'};
+`;
+
+const MenuText = styled.Text`
+  font-weight: ${({ pressed }) => pressed ? 'bold' : 'normal'};
 `;
 
 const TopMenu = (props) => (
@@ -30,7 +32,10 @@ const TopMenu = (props) => (
         to={item.path}
         key={item.path}
         pressed={item.path === props.router.location.pathname}>
-        <Text>{item.label}</Text>
+        <MenuText
+          pressed={item.path === props.router.location.pathname}>
+          {item.label}
+        </MenuText>
       </MenuItem>
     ))}
   </MenuView>

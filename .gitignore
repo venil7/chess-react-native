@@ -44,3 +44,4 @@ android/app/libs
 
 # Google
 android/app/google-services.json
+android/app/keystore.jks
