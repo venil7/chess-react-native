@@ -2,21 +2,11 @@
   "name": "chess-react-native",
   "version": "0.1.0",
   "private": true,
-  "devDependencies": {
-    "enzyme": "^2.8.2",
-    "jest-expo": "^0.4.0",
-    "react-addons-test-utils": "^15.5.1",
-    "react-dom": "^15.5.4",
-    "react-test-renderer": "^16.0.0-alpha.6"
-  },
   "scripts": {
     "start": "react-native start",
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "test": "node node_modules/jest/bin/jest.js --watch"
-  },
-  "jest": {
-    "preset": "jest-expo"
   },
   "dependencies": {
     "chess-js": "^1.0.1",
@@ -32,5 +22,12 @@
     "redux-logger": "^3.0.1",
     "redux-thunk": "^2.2.0",
     "styled-components": "^1.4.6"
+  },
+  "devDependencies": {
+    "enzyme": "^2.8.2",
+    "jest": "^20.0.4",
+    "react-addons-test-utils": "^15.5.1",
+    "react-dom": "^15.5.4",
+    "react-test-renderer": "^16.0.0-alpha.6"
   }
 }

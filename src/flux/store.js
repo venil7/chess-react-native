@@ -9,8 +9,8 @@ import appReducer from "./reducers/appReducer";
 const loggerMiddleware = createLogger();
 
 const reducer = combineReducers({
-  game: gameReducer,
   app: appReducer,
+  game: gameReducer,
   router: routerReducer,
 });
 

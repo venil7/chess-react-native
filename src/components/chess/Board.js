@@ -5,10 +5,10 @@ import PropTypes from "prop-types";
 import { Cell } from "./Cell";
 
 const StyledBoard = styled.View`
+  border: 1;
+  width: 336;
   display: flex;
   flex-flow: row wrap;
-  width: 336;
-  border: 1;
   border-color: lightsteelblue;
   justify-content: space-around;
 `;

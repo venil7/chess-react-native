@@ -6,15 +6,16 @@ import PropTypes from "prop-types";
 import { NativeRouter, Route } from "react-router-native";
 import createHistory from "history/createMemoryHistory";
 import { ConnectedRouter } from "react-router-redux";
-import { Menu, Main, About, TopMenu, MenuItem } from "./src/components";
-import { MENU, MAIN, ABOUT } from "./src/flux/actions";
-import { newStore } from "./src/flux/store";
+import { Menu, Main, About, TopMenu, MenuItem } from "./components";
+import { MENU, MAIN, ABOUT } from "./flux/actions";
+import { newStore } from "./flux/store";
 
 const Container = styled.View`
   flex: 1;
+  display: flex;
   align-items: center;
   justify-content: center;
-  background-color: white;
+  background-color: lavender;
 `;
 
 const items = [

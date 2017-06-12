@@ -6,20 +6,23 @@ import styled from "styled-components/native";
 const possibleMoveColor = "palegreen";
 const selectedColor = "darkseagreen";
 const regularLightColor = "ivory";
-const regularDarkColor = "lightsteelblue"; //SkyBlue
+const regularDarkColor = "steelblue";
 
 export const cellBackgroundColor = ({ col, row, possibleMove, selected }) => {
   const even = i => i % 2 === 0;
   const regularColor = even(col)
     ? even(row) ? regularLightColor : regularDarkColor
     : even(row) ? regularDarkColor : regularLightColor;
-  return possibleMove ? possibleMoveColor : selected ? selectedColor : regularColor;
+  return possibleMove
+    ? possibleMoveColor
+    : selected ? selectedColor : regularColor;
 };
 export const StyledCell = styled.TouchableHighlight`
   width: 40;
   height: 40;
-  border-color: grey;
   display: flex;
+  flex-grow: 1;
+  border-color: grey;
   flex-flow: row wrap;
   align-items: center;
   justify-content: center;
@@ -28,6 +31,7 @@ export const StyledCell = styled.TouchableHighlight`
 
 const SymbolText = styled.Text`
   font-size: 24;
+  color: black;
 `;
 
 export class Cell extends Component {
