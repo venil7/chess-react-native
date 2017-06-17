@@ -6,7 +6,7 @@ import PropTypes from "prop-types";
 import { NativeRouter, Route } from "react-router-native";
 import createHistory from "history/createMemoryHistory";
 import { ConnectedRouter } from "react-router-redux";
-import { Menu, Main, About, TopMenu, MenuItem } from "./components";
+import { Menu, Main, About, TopMenu, MenuItem, Settings } from "./components";
 import { MENU, MAIN, ABOUT } from "./flux/actions";
 import { newStore } from "./flux/store";
 
@@ -20,14 +20,14 @@ const Container = styled.View`
 
 const items = [
   { path: "/", label: "Menu", value: MENU },
-  { path: "/main", label: "Main", value: MAIN },
+  { path: "/main", label: "Board", value: MAIN },
   { path: "/about", label: "About", value: ABOUT }
 ];
 
 const history = createHistory();
 const store = newStore(history);
 
-export default (App = () => (
+export default (App = () =>
   <Provider store={store}>
     <ConnectedRouter history={history}>
       <Container>
@@ -37,8 +37,8 @@ export default (App = () => (
         <Route exact path="/" component={Menu} />
         <Route path="/main" component={Main} />
         <Route path="/about" component={About} />
+        <Route path="/settings" component={Settings} />
 
       </Container>
     </ConnectedRouter>
-  </Provider>
-));
+  </Provider>);

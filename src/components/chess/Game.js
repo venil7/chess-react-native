@@ -2,9 +2,17 @@ import React, { Component } from "react";
 import { Board } from "./Board";
 import { Text, View } from "react-native";
 import { connect } from "react-redux";
+import styled from "styled-components/native";
 import * as actions from "../../flux/actions/gameActions";
 
 const enhance = connect(state => ({ game: state.game }));
+
+const BoldText = styled.Text`
+  font-weight: bold;
+`;
+const LightText = styled.Text`
+  font-weight: 100;
+`;
 
 class Game extends Component {
   createGame() {
@@ -20,6 +28,7 @@ class Game extends Component {
   render() {
     const { game } = this.props;
     const { board, selectedField, possibleMoves } = game;
+    const thinking = game.thinking ? "CPU" : "Human";
     return (
       <View>
         <Board
@@ -28,7 +37,9 @@ class Game extends Component {
           board={board}
           onCellPress={field => this.onCellPress(field)}
         />
-        <Text>Move: {game.thinking ? "CPU" : "Human"}</Text>
+        <BoldText>
+          Move: <LightText>{thinking}</LightText>
+        </BoldText>
       </View>
     );
   }

@@ -60,8 +60,8 @@ const Menu = props => {
           onPress={() => dispatch(push("/main"))}
         />
         <MenuTextItem
-          text="Options"
-          onPress={() => dispatch(push("/options"))}
+          text="Settings"
+          onPress={() => dispatch(push("/settings"))}
         />
         <MenuTextItem text="Exit" onPress={() => BackAndroid.exitApp()} />
       </MenuContainer>
