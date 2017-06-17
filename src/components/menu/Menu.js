@@ -10,20 +10,35 @@ const MenuContainer = styled.View`
   display: flex;
   flex-flow: column;
   border-color: lightsteelblue;
-  align-items: center;
-  justify-content: space-around;
+  align-items: flex-start;
+  justify-content: flex-start;
 `;
 
 const MenuItem = styled.TouchableHighlight`
-  flex-grow: 1
-  justify-content: space-around;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  width: 300;
+  border: 1;
+  margin: 10;
+  padding: 5;
+  border-radius: 5;
+  border-color: #87CEEB;
+  background-color: #ADD8E6
+  align-items: center;
+`;
+
+const MenuText = styled.Text`
+  font-weight: bold;
+  font-size: 16;
+  color: white;
 `;
 
 const MenuTextItem = props => {
   const { text, ...rest } = props;
   return (
     <MenuItem {...rest}>
-      <Text>{text}</Text>
+      <MenuText>{text}</MenuText>
     </MenuItem>
   );
 };
@@ -39,10 +54,7 @@ const Menu = props => {
   return (
     <Content>
       <MenuContainer>
-        <MenuTextItem
-          text="New Game"
-          onPress={() => startNewGame()}
-        />
+        <MenuTextItem text="New Game" onPress={() => startNewGame()} />
         <MenuTextItem
           text="Resume Game"
           onPress={() => dispatch(push("/main"))}

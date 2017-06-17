@@ -1,11 +1,17 @@
-import React from 'react';
-import { Text } from 'react-native';
-import { Content } from '../Content';
+import React from "react";
+import { Text } from "react-native";
+import { Content } from "../Content";
+import styled from "styled-components/native";
 
-export const About = () => (
+const about = "© Art Deineka, 2017\nTwitter: @darkest_ruby";
+const AboutText = styled.Text`
+  font-weight: bold;
+  font-size: 16;
+`;
+
+export const About = () =>
   <Content>
-    <Text>
-      about...
-    </Text>
-  </Content>
-);
+    <AboutText>
+      {about}
+    </AboutText>
+  </Content>;
