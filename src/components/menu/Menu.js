@@ -24,7 +24,7 @@ const MenuItem = styled.TouchableHighlight`
   padding: 5;
   border-radius: 5;
   border-color: #87CEEB;
-  background-color: #ADD8E6
+  background-color: #FFA07A;
   align-items: center;
 `;
 
