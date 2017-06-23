@@ -1,37 +1,37 @@
-import { Game, Player, Move } from "chess-js";
+import { Player, Move, cpu } from 'chess-js';
 
 export const newGame = () => {
-  return { type: "NEW_GAME" };
+  return { type: 'NEW_GAME' };
 };
 
 export const selectField = field => {
-  return { type: "SELECT_FIELD", field };
+  return { type: 'SELECT_FIELD', field };
 };
 
 export const cpuTimeOn = () => {
-  return { type: "CPU_TIME_ON" };
+  return { type: 'CPU_TIME_ON' };
 };
 
-export const setAplhaBetta = alphaBetta => {
-  return { type: "SET_ALPHABETTA", alphaBetta };
+export const setPruning = pruning => {
+  return { type: 'SET_PRUNING', pruning };
 };
 
-export const setDifficulty = difficulty => {
-  return { type: "SET_DIFFICULTY", difficulty };
+export const setDepth = depth => {
+  return { type: 'SET_DEPTH', depth };
 };
 
 export const replaceBoard = board => {
-  return { type: "REPLACE_BOARD", board };
+  return { type: 'REPLACE_BOARD', board };
 };
 
 export const cpuMoveThunk = () => (dispatch, getState) => {
-  const { game } = getState();
-  const board = Game.cpu(game.board);
+  const { game: { options: { pruning, depth } }, game } = getState();
+  const board = cpu(game.board, pruning, depth);
   dispatch(replaceBoard(board));
 };
 
 export const movePiece = move => {
-  return { type: "MOVE_PIECE", move };
+  return { type: 'MOVE_PIECE', move };
 };
 
 export const selectFieldThunk = field => (dispatch, getState) => {

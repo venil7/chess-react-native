@@ -1,10 +1,10 @@
-import React, { Component } from "react";
-import { Text, View, Slider, Switch } from "react-native";
-import styled from "styled-components/native";
-import { connect } from "react-redux";
-import { push } from "react-router-redux";
-import { Content } from "../Content";
-import { setAplhaBetta, setDifficulty } from "../../flux/actions/gameActions";
+import React, { Component } from 'react';
+import { Text, View, Slider, Switch } from 'react-native';
+import styled from 'styled-components/native';
+import { connect } from 'react-redux';
+import { push } from 'react-router-redux';
+import { Content } from '../Content';
+import { setPruning, setDepth } from '../../flux/actions/gameActions';
 
 const enhance = connect(state => ({
   router: state.router,
@@ -24,33 +24,33 @@ const SettingsText = styled.Text`
   font-size: 18;
 `;
 
-const difficultyText = diff => {
+const depthText = diff => {
   switch (diff) {
     case 1:
-      return "👶";
+      return '👶';
     case 2:
-      return "😇";
+      return '😇';
     case 3:
-      return "😎";
+      return '😎';
     case 4:
-      return "👿";
+      return '👿';
   }
 };
 
 class Settings extends Component {
-  onDifficultySlidingComplete(diffuculty) {
+  onDepthSlidingComplete(depth) {
     const { dispatch } = this.props;
-    dispatch(setDifficulty(diffuculty));
+    dispatch(setDepth(depth));
   }
 
-  onUseAlphaBettaPruningToggle(alphaBetta) {
+  onPruningToggle(pruning) {
     const { dispatch } = this.props;
-    dispatch(setAplhaBetta(alphaBetta));
+    dispatch(setPruning(pruning));
   }
 
   render() {
-    const { difficulty, alphaBetta } = this.props.game;
-    const difficultyTxt = difficultyText(difficulty);
+    const { options: { depth, pruning } } = this.props.game;
+    const depthTxt = depthText(depth);
     return (
       <Content>
         <Row>
@@ -61,21 +61,18 @@ class Settings extends Component {
             step={1}
             minimumValue={1}
             maximumValue={4}
-            value={difficulty}
-            onSlidingComplete={diff => this.onDifficultySlidingComplete(diff)}
+            value={depth}
+            onSlidingComplete={diff => this.onDepthSlidingComplete(diff)}
           />
           <SettingsText>
-            {difficultyTxt}
+            {depthTxt}
           </SettingsText>
         </Row>
         <Row>
           <SettingsText>
             Alpha-betta pruning (experimental)
           </SettingsText>
-          <Switch
-            value={alphaBetta}
-            onValueChange={val => this.onUseAlphaBettaPruningToggle(val)}
-          />
+          <Switch value={pruning} onValueChange={val => this.onPruningToggle(val)} />
         </Row>
       </Content>
     );

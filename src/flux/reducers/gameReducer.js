@@ -1,4 +1,4 @@
-import { Board } from "chess-js";
+import { Board } from 'chess-js';
 
 const initState = () => {
   return {
@@ -6,17 +6,19 @@ const initState = () => {
     selectedField: null,
     possibleMoves: [],
     thinking: false,
-    alphaBetta: false,
-    difficulty: 3
+    options: {
+      pruning: true,
+      depth: 3
+    }
   };
 };
 
 const gameReducer = (state = initState(), action) => {
   switch (action.type) {
-    case "NEW_GAME": {
+    case 'NEW_GAME': {
       return initState();
     }
-    case "MOVE_PIECE": {
+    case 'MOVE_PIECE': {
       const move = action.move;
       const board = state.board.makeMove(move);
       return {
@@ -26,21 +28,24 @@ const gameReducer = (state = initState(), action) => {
         possibleMoves: []
       };
     }
-    case "CPU_TIME_ON": {
+    case 'CPU_TIME_ON': {
       return {
         ...state,
         thinking: true
       };
     }
-    case "REPLACE_BOARD": {
+    case 'REPLACE_BOARD': {
       return {
         board: action.board,
         selectedField: null,
         possibleMoves: [],
-        thinking: false
+        thinking: false,
+        options: {
+          ...state.options
+        }
       };
     }
-    case "SELECT_FIELD": {
+    case 'SELECT_FIELD': {
       const field = action.field;
       return {
         ...state,
@@ -48,13 +53,25 @@ const gameReducer = (state = initState(), action) => {
         possibleMoves: field.isEmpty ? [] : field.possibleMoves(state.board)
       };
     }
-    case "SET_ALPHABETTA": {
-      const { alphaBetta } = action;
-      return { ...state, alphaBetta };
+    case 'SET_PRUNING': {
+      const { pruning } = action;
+      return {
+        ...state,
+        options: {
+          ...state.options,
+          pruning
+        }
+      };
     }
-    case "SET_DIFFICULTY": {
-      const { difficulty } = action;
-      return { ...state, difficulty };
+    case 'SET_DEPTH': {
+      const { depth } = action;
+      return {
+        ...state,
+        options: {
+          ...state.options,
+          depth
+        }
+      };
     }
     default:
       return state;
