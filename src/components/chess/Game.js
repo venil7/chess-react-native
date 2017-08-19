@@ -1,9 +1,10 @@
-import React, { Component } from "react";
-import { Board } from "./Board";
-import { Text, View } from "react-native";
-import { connect } from "react-redux";
-import styled from "styled-components/native";
-import * as actions from "../../flux/actions/gameActions";
+import React, { Component } from 'react';
+import { Board } from './Board';
+import { Text, View } from 'react-native';
+import { connect } from 'react-redux';
+import styled from 'styled-components/native';
+import * as actions from '../../flux/actions/gameActions';
+import { restoreState } from '../../flux/middleware/saveState';
 
 const enhance = connect(state => ({ game: state.game }));
 
@@ -15,6 +16,16 @@ const LightText = styled.Text`
 `;
 
 class Game extends Component {
+  // async componentWillMount() {
+  //   const { dispatch } = this.props;
+  //   try {
+  //     const { game } = await restoreState();
+  //     if (game) {
+  //       dispatch(actions.replaceBoard(game.board));
+  //     }
+  //   } catch (e) {}
+  // }
+
   createGame() {
     const { dispatch } = this.props;
     dispatch(actions.newGame());
@@ -28,7 +39,7 @@ class Game extends Component {
   render() {
     const { game } = this.props;
     const { board, selectedField, possibleMoves } = game;
-    const thinking = game.thinking ? "CPU" : "Human";
+    const thinking = game.thinking ? 'CPU' : 'Human';
     return (
       <View>
         <Board

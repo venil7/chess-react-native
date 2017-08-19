@@ -9,7 +9,7 @@
     "test": "node node_modules/jest/bin/jest.js --watch"
   },
   "dependencies": {
-    "chess-js": "^1.0.3",
+    "chess-js": "^2.0.0",
     "history": "^4.6.1",
     "prop-types": "^15.5.8",
     "react": "16.0.0-alpha.6",

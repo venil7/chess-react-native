@@ -55,7 +55,7 @@ class Settings extends Component {
       <Content>
         <Row>
           <SettingsText>
-            Difficulty:
+            Difficulty
           </SettingsText>
           <DifficultySlider
             step={1}
@@ -70,7 +70,7 @@ class Settings extends Component {
         </Row>
         <Row>
           <SettingsText>
-            Alpha-betta pruning (experimental)
+            Alpha-betta pruning
           </SettingsText>
           <Switch value={pruning} onValueChange={val => this.onPruningToggle(val)} />
         </Row>

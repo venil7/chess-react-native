@@ -1,4 +1,3 @@
-import gameActions from "./gameActions";
-import appActions, { MAIN, MENU, ABOUT } from "./appActions";
+import gameActions from './gameActions';
 
-export { gameActions, appActions, MAIN, MENU, ABOUT };
+export { gameActions };

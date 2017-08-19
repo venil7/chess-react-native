@@ -1,10 +1,10 @@
-import React from "react";
-import { Text, BackAndroid } from "react-native";
-import { Content } from "../Content";
-import { connect } from "react-redux";
-import { push } from "react-router-redux";
-import { newGame } from "../../flux/actions/gameActions";
-import styled from "styled-components/native";
+import React from 'react';
+import { Text, BackAndroid } from 'react-native';
+import { Content } from '../Content';
+import { connect } from 'react-redux';
+import { push } from 'react-router-redux';
+import { newGame, restoreSavedStateThunk } from '../../flux/actions/gameActions';
+import styled from 'styled-components/native';
 
 const MenuContainer = styled.View`
   display: flex;
@@ -48,21 +48,19 @@ const enhance = connect(state => ({ router: state.router }));
 const Menu = props => {
   const { dispatch } = props;
   const startNewGame = () => {
+    dispatch(push('/main'));
     dispatch(newGame());
-    dispatch(push("/main"));
+  };
+  const restoreGame = () => {
+    dispatch(push('/main'));
+    dispatch(restoreSavedStateThunk());
   };
   return (
     <Content>
       <MenuContainer>
         <MenuTextItem text="New Game" onPress={() => startNewGame()} />
-        <MenuTextItem
-          text="Resume Game"
-          onPress={() => dispatch(push("/main"))}
-        />
-        <MenuTextItem
-          text="Settings"
-          onPress={() => dispatch(push("/settings"))}
-        />
+        <MenuTextItem text="Resume Game" onPress={() => dispatch(push('/main'))} />
+        <MenuTextItem text="Settings" onPress={() => dispatch(push('/settings'))} />
         <MenuTextItem text="Exit" onPress={() => BackAndroid.exitApp()} />
       </MenuContainer>
     </Content>

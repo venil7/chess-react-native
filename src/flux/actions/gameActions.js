@@ -1,4 +1,5 @@
 import { Player, Move, cpu } from 'chess-js';
+import { restoreState } from '../middleware/saveState';
 
 export const newGame = () => {
   return { type: 'NEW_GAME' };
@@ -32,6 +33,11 @@ export const cpuMoveThunk = () => (dispatch, getState) => {
 
 export const movePiece = move => {
   return { type: 'MOVE_PIECE', move };
+};
+
+export const restoreSavedStateThunk = () => async (dispatch, getState) => {
+  const { game } = await restoreState();
+  return dispatch(replaceBoard(game.board));
 };
 
 export const selectFieldThunk = field => (dispatch, getState) => {

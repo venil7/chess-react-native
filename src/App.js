@@ -1,14 +1,13 @@
-import React from "react";
-import { Provider } from "react-redux";
-import styled from "styled-components/native";
-import { StyleSheet, Text, View } from "react-native";
-import PropTypes from "prop-types";
-import { NativeRouter, Route } from "react-router-native";
-import createHistory from "history/createMemoryHistory";
-import { ConnectedRouter } from "react-router-redux";
-import { Menu, Main, About, TopMenu, MenuItem, Settings } from "./components";
-import { MENU, MAIN, ABOUT } from "./flux/actions";
-import { newStore } from "./flux/store";
+import React from 'react';
+import { Provider } from 'react-redux';
+import styled from 'styled-components/native';
+import { StyleSheet, Text, View } from 'react-native';
+import PropTypes from 'prop-types';
+import { NativeRouter, Route } from 'react-router-native';
+import createHistory from 'history/createMemoryHistory';
+import { ConnectedRouter } from 'react-router-redux';
+import { Menu, Main, About, TopMenu, MenuItem, Settings } from './components';
+import { newStore } from './flux/store';
 
 const Container = styled.View`
   flex: 1;
@@ -18,11 +17,7 @@ const Container = styled.View`
   background-color: lavender;
 `;
 
-const items = [
-  { path: "/", label: "Menu", value: MENU },
-  { path: "/main", label: "Board", value: MAIN },
-  { path: "/about", label: "About", value: ABOUT }
-];
+const items = [{ path: '/', label: 'Menu' }, { path: '/main', label: 'Board' }, { path: '/about', label: 'About' }];
 
 const history = createHistory();
 const store = newStore(history);

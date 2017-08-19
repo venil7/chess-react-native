@@ -1,6 +1,6 @@
 import { Board } from 'chess-js';
 
-const initState = () => {
+export const initState = () => {
   return {
     board: Board.newGame(),
     selectedField: null,
@@ -16,7 +16,13 @@ const initState = () => {
 const gameReducer = (state = initState(), action) => {
   switch (action.type) {
     case 'NEW_GAME': {
-      return initState();
+      return {
+        ...state,
+        board: Board.newGame(),
+        selectedField: null,
+        possibleMoves: [],
+        thinking: false
+      };
     }
     case 'MOVE_PIECE': {
       const move = action.move;
