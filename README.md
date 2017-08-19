@@ -1,3 +1,5 @@
+<img src="https://lh3.googleusercontent.com/yy2zrd3es95Lg4dhwbxtSuBTXEi9snpdMcvfq937MzW1wYwvKz-jBpmZdrrC7M_F1CKk=w300-rw" width="64">
+
 ## chess react native
 A demo project for my [JavaScript chess engine](https://github.com/venil7/chess)
 
